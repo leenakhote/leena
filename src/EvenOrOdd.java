@@ -1,22 +1,20 @@
 /**
  * Created by leena on 30/03/15.
  */
+
+import java.util.Scanner;
 public class EvenOrOdd {
+    public static void main(String args[])
+    {
+        int x;
+        System.out.println("Enter an integer to check if it is odd or even ");
+        Scanner in = new Scanner(System.in);
+        x = in.nextInt();
 
-    public static int CheckEvenOrOdd(int num) {
-        if (num > 2) {
-            int number = num - 2;
-            num = CheckEvenOrOdd(number);
-        }
-        return num;
+        if ( x % 2 == 0 )
+            System.out.println("You entered an even number.");
+        else
+            System.out.println("You entered an odd number.");
     }
 
-    public static void main(String[] args) {
-        int num = CheckEvenOrOdd(5322221);
-        if (num == 1) {
-            System.out.println("Odd number");
-        } else {
-            System.out.println("Even number");
-        }
-    }
 }
